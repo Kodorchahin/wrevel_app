@@ -1,14 +1,18 @@
 @font-face {
     font-family: GillSans-Light; 
-    src: url("fonts/GillSans-Light.ttf")
+    src: url("/fonts/GillSans-Light.ttf");
 }
 
+@font-face {
+    font-family: Lobster;
+    src: url("/fonts/Lobster.ttf");
+}
 
 
 body {
     margin: 0;
     padding: 0;
-    background: #4d4d4d url("wrevel_app/images/app_background.jpg") no-repeat;
+    background:  url("images/app_background.jpg") no-repeat;
     
 }
 
@@ -26,16 +30,26 @@ body {
     width: 100%;
     height: 25%;
     color: #F0F1F1;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-family: 'Gill Sans', GillSans-Light;
     font-size: 12px;
-    background-color: rgba(11, 9, 9, 0.5);
+    background-color: rgba(9, 7, 7, 0.5);
 }
 
 #explore {
     display: inline;
     color: #F0F1F1;
     bottom: 28%;
+    font-family: GillSans-Light;
+  
 }  
+
+#wrevel {
+    display: inline;
+    color: #F0F1F1;
+    bottom: 28%;
+    font-family: Lobster;
+    font-size: 25px;
+}
 
 .homepageBTN {
     border: none;
@@ -45,7 +59,7 @@ body {
     display: inline-block;
     font-size: 16px;
     border-radius: 3px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-family: GillSans-Light;
     height: 28%;
     padding-left: 2.5%;
     padding-right: 2.5%;
