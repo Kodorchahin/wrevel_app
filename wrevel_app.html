@@ -7,8 +7,10 @@
     {{#if currentUser}}
        {{>showroom}}   
     {{else}}
-      {{>wrevelLandingPage}}
-      {{>usrLoginBTNs}}
+    {{>BTNsignin}}
+    {{>BTNjoinnow}}
+      <!--{{>wrevelLandingPage}}-->
+      <!--{{>usrLoginBTNs}}-->
     {{/if}}
    
 </body>
@@ -58,8 +60,8 @@
 <template name="BTNsignin">
     <div id = "divsignin">
       <form>
-        <input type = "text" name = "email" placeholder = "email" required><br/>
-        <input type = "password" id = "password" placeholder = "password" required><br/>
+        <input type = "text" id = "login-email" placeholder = "email" required><br/>
+        <input type = "password" id = "login-password" placeholder = "password" required><br/>
         <input type = "submit" value = "submit">
       </form>
     </div>
@@ -69,12 +71,12 @@
 <template name="BTNjoinnow">
        <div id = "divjoinnow">
       <form>
-        <input type = "text" name = "email" placeholder = "email" required><br/>
-        <input type = "text" name = "UName" placeholder = "username" required><br/>
-        <input type = "text" name = "FName" placeholder = "first name" required><br/>
-        <input type = "text" name = "LName" placeholder = "last name" required><br/>
+        <input type = "text" id = "email" placeholder = "email" required><br/>
+        <input type = "text" id = "UName" placeholder = "username" required><br/>
+        <input type = "text" id = "FName" placeholder = "first name" required><br/>
+        <input type = "text" id = "LName" placeholder = "last name" required><br/>
         <input type = "password" id = "password" placeholder = "password" required><br/>
-        <input type = "checkbox" required> <p id = "explore">I agree to the terms of use</p><br/>
+        <!--<input type = "checkbox" required> <p id = "explore">I agree to the terms of use</p><br/>-->
         <input type = "submit" value = "Get Started"><br/>
         <p id = "explore">By logging in, you’re agreeing to our <br/>
         <b>Privacy Policy</b> & <b>Terms of Service.</b></p>
@@ -87,6 +89,7 @@
 
 <template name = "showroom">
   <h1>Logged In</h1>
+  <p><a href='#' class = "logout">Logout</a></p>
 </template>
 
 
