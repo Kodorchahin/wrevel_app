@@ -4,7 +4,16 @@
 </head>
 
 <body>
-    <div id = "landingPage">
+    
+{{>wrevelLandingPage}}
+{{>usrLoginBTNs}}
+   
+</body>
+
+
+
+<template name = "wrevelLandingPage">
+  <div id = "landingPage">
     <center>
       <br/><br/>
       <img src =  "images/w_logo_regular.png" height=30% width="30%">  <br/>
@@ -24,8 +33,11 @@
       </form>
     </center>
   </div>
+</template>
 
-    <div id = "contentForm">
+
+<template name = "usrLoginBTNs">
+   <div id = "contentForm">
         <form class="SignIn">
             <center>
               <button class = homepageBTN id = "facebooklogin" type = "submit"><b>f</b> &nbsp; | &nbsp; Sign in with facebook</button> <br/>
@@ -37,8 +49,32 @@
             </center>
         </form>
     </div>
-</body>
+</template>
+
 
 <template name="BTNsignin">
+    <div id = "divsignin">
+      <form>
+        <input type = "text" name = "email" placeholder = "email" required><br/>
+        <input type = "password" id = "password" placeholder = "password" required><br/>
+        <input type = "submit" value = "submit">
+      </form>
+    </div>
+</template>
 
+
+<template name="BTNjoinnow">
+       <div id = "divjoinnow">
+      <form>
+        <input type = "text" name = "email" placeholder = "email" required><br/>
+        <input type = "text" name = "UName" placeholder = "username" required><br/>
+        <input type = "text" name = "FName" placeholder = "first name" required><br/>
+        <input type = "text" name = "LName" placeholder = "last name" required><br/>
+        <input type = "password" id = "password" placeholder = "password" required><br/>
+        <input type = "checkbox" required><br/>
+        <input type = "submit" value = "Get Started">
+        <p id = "explore">By logging in, you’re agreeing to our <br/>
+        <b>Privacy Policy</b> & <b>Terms of Service.</b></p>
+      </form>
+    </div>
 </template>

@@ -1,20 +1,26 @@
 @font-face {
     font-family: GillSans-Light; 
-    src: url("/fonts/GillSans-Light.ttf");
+    src: url("/fonts/GillSans-Light.ttf"),
+         url("/fonts/GillSans-Light.eot"),
+         url("/fonts/GillSans-Light.otf");
 }
 
 @font-face {
     font-family: Lobster;
-    src: url("/fonts/Lobster.ttf");
+    src: url("/fonts/Lobster.ttf"),
+         url("/fonts/Lobster.eot"),
+         url("/fonts/Lobster.otf");
 }
 
 
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
     background:  url("images/app_background.jpg") no-repeat;
     
 }
+
 
 #landingPage {
     position: fixed;
@@ -22,6 +28,7 @@ body {
     height:75vh;
     top: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    white-space: normal;
 }
 
 #contentForm {
@@ -42,6 +49,12 @@ body {
     font-family: GillSans-Light;
   
 }  
+
+#agreement {
+    color: #F0F1F1;
+    bottom: 28%;
+    font-family: GillSans-Light;
+}
 
 #wrevel {
     display: inline;
