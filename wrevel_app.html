@@ -4,13 +4,16 @@
 </head>
 
 <body>
-    
-{{>wrevelLandingPage}}
-{{>usrLoginBTNs}}
+    {{#if currentUser}}
+       {{>showroom}}   
+    {{else}}
+      {{>wrevelLandingPage}}
+      {{>usrLoginBTNs}}
+    {{/if}}
    
 </body>
 
-
+<!---------------------------- Landing Page Templates----------------------------->
 
 <template name = "wrevelLandingPage">
   <div id = "landingPage">
@@ -71,10 +74,48 @@
         <input type = "text" name = "FName" placeholder = "first name" required><br/>
         <input type = "text" name = "LName" placeholder = "last name" required><br/>
         <input type = "password" id = "password" placeholder = "password" required><br/>
-        <input type = "checkbox" required><br/>
-        <input type = "submit" value = "Get Started">
+        <input type = "checkbox" required> <p id = "explore">I agree to the terms of use</p><br/>
+        <input type = "submit" value = "Get Started"><br/>
         <p id = "explore">By logging in, you’re agreeing to our <br/>
         <b>Privacy Policy</b> & <b>Terms of Service.</b></p>
       </form>
     </div>
 </template>
+
+
+<!------------------------------Showroom Templates------------------------------->
+
+<template name = "showroom">
+  <h1>Logged In</h1>
+</template>
+
+
+<!----------------------------Create-a-Wrev Templates------------------------------>
+
+
+
+
+
+
+
+<!------------------------------Event Templates------------------------------------>
+
+
+
+
+
+
+
+
+<!------------------------------Hub Templates----------------------------------->
+
+
+
+
+
+
+
+
+
+
+<!------------------------------RSVC Templates----------------------------------->
